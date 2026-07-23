@@ -10,7 +10,11 @@ export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<SettingTab>("profile")
 
   return (
-    <div className="flex">
+    <div className="bg-gray-50 ">
+        <h1 className="text-3xl font-bold px-8 py-4">Account Settings</h1>
+        <p className="px-8 text-gray-600">Manage your account preferences, security credentials, and communication settings.</p>
+    <div className="flex p-6 ">
+      
       <SettingSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <div className="flex-1 p-6">
@@ -18,6 +22,8 @@ export default function SettingsPage() {
         {activeTab === "notification" && <SettingNotification />}
         {activeTab === "security" && <SettingSecurity />}
       </div>
+    </div>
+
     </div>
   )
 }
