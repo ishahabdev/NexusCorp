@@ -19,7 +19,7 @@ function Footer() {
   ];
 
   return (
-    <section className="border px-4 sm:px-6 md:px-8 py-4">
+    <section className="border bg-white px-4 sm:px-6 md:px-8 py-4">
       <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-6">
         <div className="flex flex-col gap-2 max-w-xs">
           <p className="font-bold text-lg">NexusCorp</p>

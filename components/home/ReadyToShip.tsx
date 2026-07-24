@@ -2,7 +2,8 @@ import Button from "@/components/ui/Button";
 
 export default function ReadyToShip() {
   return (
-<section className="py-12 sm:py-16 md:py-20 px-4 text-left relative bg-[#2D3133] rounded-xl text-white overflow-hidden mb-6 sm:mb-10 md:mb-8">      <div className="px-4 sm:px-6 md:px-8">
+<div className="p-10 bg-gray-50">
+  <section className="py-12  sm:py-16 md:py-20 px-4 text-left relative bg-[#2D3133] rounded-xl text-white overflow-hidden mb-6 sm:mb-10 md:mb-8">      <div className="px-4 sm:px-6 md:px-8">
         <img
           src="/icons/homeIcon5.png"
           className="absolute right-0 top-0 w-32 sm:w-48 md:w-64 opacity-10"
@@ -18,8 +19,16 @@ export default function ReadyToShip() {
           <Button className="px-4 py-2 sm:px-6 sm:py-2.5 text-sm sm:text-base w-full sm:w-auto">
             Get Started for Free
           </Button>    
+          <Button variant="transparent" className="px-4  text-white py-2 sm:px-6 sm:py-2.5 text-sm sm:text-base w-full sm:w-auto">
+            Contact Sales
+          </Button>    
           </div>
       </div>
     </section>
+</div>
+
+
+
+
   );
 }

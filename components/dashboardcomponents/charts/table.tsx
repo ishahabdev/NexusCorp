@@ -132,9 +132,7 @@ export default function ActivityLogsTable() {
                       {log.status.charAt(0) + log.status.slice(1).toLowerCase()}
                     </span>
                   </td>
-                  <td className="py-5 px-4 text-right">
-                    <button className="text-blue-600 hover:underline text-xs whitespace-nowrap">View details</button>
-                  </td>
+                 
                 </tr>
               ))
             )}

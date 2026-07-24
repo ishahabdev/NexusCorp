@@ -1,6 +1,5 @@
 "use client"
-import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
-import Button from "@/components/ui/Button"
+import {  SidebarTrigger } from "@/components/ui/sidebar"
 import { Bell, ChevronRight, CircleQuestionMark } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
 import {
@@ -14,10 +13,9 @@ import {
     DropdownMenuContent,
     DropdownMenuGroup,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import * as React from "react"
 
 export default function DashboardNavbar() {
     const pathname = usePathname()
@@ -31,7 +29,7 @@ export default function DashboardNavbar() {
     }
 
     return (
-        <section className="flex border p-2 items-center text-center justify-between  ">
+        <section className="flex border bg-[#f7f9fb] p-2 items-center text-center justify-between  ">
             <div  className="flex justify-between items-center text-center gap-6">
                 <SidebarTrigger />
 

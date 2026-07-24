@@ -53,17 +53,18 @@ export default function Navbar() {
 
 
 
-        <div className="flex items-center gap-2">
-          {isBlogPage && (
-            <div className="relative">
-              <IoMdSearch className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search ..."
-                className="border rounded-md p-2 pl-8 text-sm focus:outline-none focus:ring-2 mr-4 focus:ring-blue-500"
-              />
-            </div>
-          )}
+      <div className="flex items-center gap-2">
+  {isBlogPage && (
+    <div className="relative hidden lg:block">
+      <IoMdSearch className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400" />
+      <input
+        type="text"
+        placeholder="Search ..."
+        className="border border-gray-400 rounded-md bg-[#F2F4F6] p-2 pl-8 text-sm focus:outline-none focus:ring-2 mr-4 focus:ring-blue-500"
+      />
+    </div>
+  )}
+
           <Link href="/dashboard" className="hidden md:block shrink-0">
             <Button onClick={HandleClick}>Get Started</Button>
           </Link>

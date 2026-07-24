@@ -21,7 +21,7 @@ export default async function BlogPage({
 
   if (currentPage === "2") {
     return (
-      <div className="bg-blue-50 px-16 py-8">
+      <div className="bg-[#F7F9FB] px-16 py-8">
         <BlogSecondPage />
         <BlogPagination activePage={activePage} />
       </div>

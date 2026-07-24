@@ -4,7 +4,7 @@ import * as React from "react"
 import { mergeProps } from "@base-ui/react/merge-props"
 import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"
-
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import  Button  from "@/components/ui/Button"
@@ -271,7 +271,8 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <PanelLeftIcon />
+      <GiHamburgerMenu />
+
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )

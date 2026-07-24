@@ -24,11 +24,14 @@ export default function DashboardUsers() {
     return (
         <section className="bg-gray-50   ">
    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:p-4 md:p-2 sm:p-2 items-start ">
-  <div className="lg:col-span-2 flex flex-col sm:flex-row gap-6 p-4 sm:p-6 bg-white border-2 border-gray-200 rounded-xl min-h-74">
-    <Avatar className="w-20 h-20 sm:w-28 sm:h-28 shrink-0">
-      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-      <AvatarFallback>CN</AvatarFallback>
-    </Avatar>
+  <div className="lg:col-span-2 flex flex-col sm:flex-row gap-6 p-4 sm:p-6 bg-white border-2 border-gray-200 rounded-xl min-h-60">
+    <Avatar className="w-20 h-20 sm:w-28 sm:h-28 shrink-0 border-2">
+  <AvatarBadge
+    className="text-green-500 bg-green-600 right-3 bottom-2"
+  />
+  <AvatarImage src="/images/Profile2.jpg" alt="Profile2" />
+  <AvatarFallback>AR</AvatarFallback>
+</Avatar>
 
     <div className="flex flex-col gap-2">
       <h1 className="text-lg sm:text-xl font-semibold flex flex-wrap items-center gap-2">

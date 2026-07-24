@@ -45,11 +45,11 @@ const pageStats = [
 ]
 
     return (
-        <section>
-            <div className="flex justify-between p-4">
+        <section className="bg-[#F7F9FB]">
+            <div className="flex justify-between p-6">
                 <div className="flex gap-2">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="flex gap-1 w-36 text-xs items-center text-center" render={<Button variant="transparent"><span>All Channels</span> <FaCaretDown /></Button>} />
+                        <DropdownMenuTrigger className="flex gap-1 w-36 text-xs items-center text-center" render={<Button variant="outline" className="text-black "><span>All Channels</span> <FaCaretDown /></Button>} />
                         <DropdownMenuContent className="w-40">
                             <DropdownMenuGroup>
                                 <DropdownMenuItem
@@ -71,7 +71,7 @@ const pageStats = [
                     </DropdownMenu>
 
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="flex gap-1 w-36 text-xs  items-center text-center" render={<Button variant="transparent"><span>Device : All</span> <FaCaretDown /></Button>} />
+                        <DropdownMenuTrigger className="flex gap-1 w-36 text-xs  items-center text-center" render={<Button variant="outline"className="text-black "><span>Device : All</span> <FaCaretDown /></Button>} />
                         <DropdownMenuContent className="w-40">
                             <DropdownMenuGroup>
                                 <DropdownMenuItem
@@ -94,18 +94,17 @@ const pageStats = [
 
                 </div>
                 <div>
-                    <Button className="flex gap-1 w-42 text-xs " >Export Reports <Download className="h-4 w-4" /></Button>
+                    <Button className="flex gap-1 w-42 text-xs "  > <Download className="h-4 w-4" /> Export Reports </Button>
                 </div>
             </div>
-
-
-
-            <div className="flex justify-between  p-8">
-                <DashboardTrafficCharts />
-                <DashboardTrafficChart2 />
-            </div>
-
-
+       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 w-full p-6 items-stretch">
+  <div className="min-w-0 md:col-span-7 lg:col-span-8">
+  <DashboardTrafficCharts />
+</div>
+<div className="min-w-0 md:col-span-5 lg:col-span-4">
+  <DashboardTrafficChart2 />
+</div>
+</div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-6">
   {stats.map((stat, index) => (
     <div key={index} className="bg-white border rounded-md p-4">
@@ -124,38 +123,53 @@ const pageStats = [
     </div>
   ))}
 </div>
-    <div className="m-8 py-4 border bg-white   rounded-xl    ">    
-        <div className="flex justify-between text-center p-4"> 
-            <h1 className=" text-xl font-semibold ">Top Landing Pages</h1>  
-            <p className="text-blue-700 text-xs">View All</p>
-            
-            
-            
-            
-            
-            </div>      
-    <table className="w-full text-sm  ">
-      <thead className="bg-gray-200  rounded-xl">
-        <tr className="border-b text-left ">
-          <th className=" font-medium text-xs text-gray-800 p-6 ">Page URL</th>
-          <th className=" font-medium text-xs text-gray-800 p-6">Visitors</th>
-          <th className=" font-medium text-xs text-gray-800 p-6">Conversion Rate</th>
-          <th className=" font-medium text-xs text-gray-800 p-6">Trend</th>
+   <div className="m-4 sm:m-6 lg:m-8 py-4 border bg-white rounded-xl">
+  <div className="flex justify-between items-center text-center p-4">
+    <h1 className="text-base sm:text-lg lg:text-xl font-semibold">
+      Top Landing Pages
+    </h1>
+    <p className="text-blue-700 text-xs cursor-pointer">View All</p>
+  </div>
+
+  <div className="overflow-x-auto">
+    <table className="w-full text-sm min-w-[600px]">
+      <thead className="bg-gray-200 rounded-xl">
+        <tr className="border-b text-left">
+          <th className="font-medium text-xs text-gray-800 p-3 sm:p-4 lg:p-6">
+            Page URL
+          </th>
+          <th className="font-medium text-xs text-gray-800 p-3 sm:p-4 lg:p-6">
+            Visitors
+          </th>
+          <th className="font-medium text-xs text-gray-800 p-3 sm:p-4 lg:p-6">
+            Conversion Rate
+          </th>
+          <th className="font-medium text-xs text-gray-800 p-3 sm:p-4 lg:p-6">
+            Trend
+          </th>
         </tr>
       </thead>
       <tbody>
         {pageStats.map((page, index) => (
           <tr key={index} className="border-b border-gray-400 last:border-0">
-            <td className="text-blue-600 p-4">{page.url}</td>
-            <td className="p-4">{page.visitors}</td>
-            <td className="p-4">{page.conversionRate}</td>
-            <td className="p-4">{page.icon && <page.icon className="h-4 w-4 text-blue-900" />} </td>
+            <td className="text-blue-600 p-3 sm:p-4 whitespace-nowrap">
+              {page.url}
+            </td>
+            <td className="p-3 sm:p-4 whitespace-nowrap">{page.visitors}</td>
+            <td className="p-3 sm:p-4 whitespace-nowrap">
+              {page.conversionRate}
+            </td>
+            <td className="p-3 sm:p-4">
+              {page.icon && (
+                <page.icon className="h-4 w-4 text-blue-900" />
+              )}
+            </td>
           </tr>
         ))}
       </tbody>
     </table>
+  </div>
 </div>
-
 
 
   <Footer />

@@ -1,8 +1,8 @@
 import Image from "next/image"
 export default function EnggFeature() {
     return (
-        <section className="grid grid-cols-1  items-center text-center  bg-gray-50">
-            <h3 className="text-2xl font-bold py-6">Precision-engineered features</h3>
+        <section className="grid grid-cols-1  items-center text-center px-8  bg-gray-50">
+            <h3 className="text-2xl font-bold py-6 ">Precision-engineered features</h3>
             <h6 className="text-sm font-md text-gray-700">The stack you love, optimized for speed.</h6>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-10 py-8 px-4">
 

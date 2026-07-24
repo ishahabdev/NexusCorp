@@ -37,7 +37,7 @@ const chartConfig = {
 
 export default function DashboardPerformaceCharts() {
   return (
-    <Card className="h-full w-full min-w-0 rounded-xl overflow-hidden">
+    <Card className="h-full border-2 w-full min-w-0 rounded-xl overflow-hidden">
       <CardHeader>
         <CardTitle className="text-xl font-normal">
           System Performance

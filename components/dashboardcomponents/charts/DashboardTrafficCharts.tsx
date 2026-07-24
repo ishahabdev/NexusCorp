@@ -39,8 +39,8 @@ export default function DashboardTrafficCharts() {
     return (
         <Card className="w-full min-w-0 h-64 sm:h-72 md:h-80 lg:h-110">
             <CardHeader className="p-3 sm:p-4 md:p-6">
-                <CardTitle className="text-sm sm:text-base md:text-lg">
-                    Monthly Visitor
+                <CardTitle className="text-l sm:text-base md:text-2xl font-bold">
+                    Monthly Traffic
                 </CardTitle>
                 <CardDescription className="text-[10px] sm:text-xs md:text-sm">
                     Unique visitors across all registered domains.

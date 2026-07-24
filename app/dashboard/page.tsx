@@ -46,7 +46,7 @@ export default function DashboardPage() {
   const [open, setOpen] = useState(false)
 
   return (
-    <section className="w-full max-w-full  bg-gray-50">
+    <section className="w-full max-w-full  bg-[#f7f9fb]">
       <div className="p-4 sm:p-6">
         <h1 className="text-2xl sm:text-4xl font-bold">Welcome back, Nexus</h1>
         
@@ -90,7 +90,7 @@ export default function DashboardPage() {
     <DashboardPerformaceCharts />
   </div>
 
-  <div className="w-full lg:basis-1/3 min-w-0 shrink-0 bg-white border flex flex-col rounded-xl p-6">
+  <div className="w-full lg:basis-1/3 min-w-0 shrink-0 bg-white border-2 flex flex-col rounded-xl p-6">
     <h2 className="font-semibold mb-2">Recent Activity</h2>
 
     <div className="flex-1 overflow-y-auto">
@@ -108,14 +108,14 @@ export default function DashboardPage() {
 
       <Collapsible open={open} onOpenChange={setOpen}>
         {!open && (
-          <CollapsibleTrigger className="w-full text-center text-blue-700 text-xs">
+          <CollapsibleTrigger className="w-full text-center  text-blue-700 text-xs">
             View All Activity
           </CollapsibleTrigger>
         )}
 
         <CollapsibleContent>
           {Activity.map((item, index) => (
-            <div className="flex items-center gap-4 h-14" key={index}>
+            <div className="flex items-center gap-4 h-14 " key={index}>
               <div className="w-8 h-8 flex items-center justify-center rounded-full shrink-0 bg-gray-300">
                 <item.icon className={`w-4 h-4 ${item.text}`} />
               </div>

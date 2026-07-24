@@ -3,21 +3,22 @@
 
 export default function OurMission() {
   return (
-    <section className="flex flex-col justify-center items-center text-center py-20  md:px-24 lg:px-44 ">
-      <p className="text-blue-600 font-sm py-2">Our Mission</p>
+    <section className="bg-[#F7F9FB] py-10">
 
-      <h3 className="text-3xl md:text-4xl text-slate-950 font-medium font-archivo py-4 px-10 ">
-        Empowering Technical Teams Through Precision and Clarity
-      </h3>
+      <div className="flex flex-col justify-center  items-center text-center mx-auto w-full max-w-2xl px-4 sm:px-6 md:px-10 py-10">
+        <p className="text-blue-600 text-sm py-2">Our Mission</p>
 
-      <h6 className="text-gray-500 font-normal lg:px-20   ">
-        We help technical teams move faster by transforming complex, tangled
-  ideas into clear, actionable, and reliable solutions that are easy to
-   maintain, and trust, empowering teams to deliver
-  better results every day.
-      </h6>
+        <h3 className="text-2xl sm:text-3xl md:text-4xl text-slate-950 font-bold font-geist py-2">
+          Empowering technical teams through precision and clarity.
+        </h3>
 
-      
+        <h6 className="text-gray-500 font-sm text-sm sm:sm-base mt-2 px-6 py-2">
+          At NexusCorp, we believe that the best work happens when tools recede into the
+          background, leaving space for pure creative execution. We build the infrastructure for
+          tomorrow's digital leaders.
+        </h6>
+
+      </div>
     </section>
-  );
+  )
 }

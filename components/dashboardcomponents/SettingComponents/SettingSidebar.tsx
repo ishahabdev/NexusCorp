@@ -23,7 +23,7 @@ export default function SettingSidebar({
 }: SettingSidebarProps) {
 
   return (
-    <section className="w-48 border rounded-lg self-start">
+    <section className="w-52  self-start">
 
       <SidebarMenu className="gap-1 p-0">
 
@@ -41,7 +41,7 @@ export default function SettingSidebar({
               className={cn(
                 "h-5 w-5",
                 activeTab === "profile"
-                  ? "text-blue-600"
+                  ? "text-blue-600 bg-[#F2F4F6]"
                   : "text-gray-700"
               )}
             />
@@ -50,7 +50,7 @@ export default function SettingSidebar({
               className={cn(
                 "text-base",
                 activeTab === "profile"
-                  ? "text-blue-600 font-medium"
+                  ? "text-blue-600 bg-[#F2F4F6]"
                   : "text-gray-700"
               )}
             >
@@ -68,14 +68,14 @@ export default function SettingSidebar({
             isActive={activeTab === "security"}
             className={cn(
               "h-12 rounded-none px-4",
-              activeTab === "security" && "text-blue-600"
+              activeTab === "security" && "text-blue-600 bg-[#F2F4F6]"
             )}
           >
             <MdOutlineShield
               className={cn(
                 "h-6 w-6",
                 activeTab === "security"
-                  ? "text-blue-600"
+                  ? "text-blue-600 bg-[#F2F4F6]"
                   : "text-gray-700"
               )}
             />
@@ -84,7 +84,7 @@ export default function SettingSidebar({
               className={cn(
                 "text-base",
                 activeTab === "security"
-                  ? "text-blue-600 font-medium"
+                  ? "text-blue-600 bg-[#F2F4F6]"
                   : "text-gray-700"
               )}
             >
@@ -101,15 +101,15 @@ export default function SettingSidebar({
             onClick={() => setActiveTab("notification")}
             isActive={activeTab === "notification"}
             className={cn(
-              "h-12 rounded-none px-4",
-              activeTab === "notification" && "text-blue-600"
+              "h-full px-4",
+              activeTab === "notification" && "text-blue-600 bg-[#F2F4F6]"
             )}
           >
             <AiFillNotification
               className={cn(
                 "h-6 w-6",
                 activeTab === "notification"
-                  ? "text-blue-600"
+                  ? "text-blue-600 bg-[#F2F4F6]"
                   : "text-gray-700"
               )}
             />
@@ -118,7 +118,7 @@ export default function SettingSidebar({
               className={cn(
                 "text-base",
                 activeTab === "notification"
-                  ? "text-blue-600 font-medium"
+                  ? "text-blue-600 "
                   : "text-gray-700"
               )}
             >

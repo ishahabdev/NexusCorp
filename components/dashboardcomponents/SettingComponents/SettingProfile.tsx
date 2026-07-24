@@ -6,7 +6,7 @@ import { Pencil } from "lucide-react"
 import { ChangeEvent, useRef, useState } from "react"
 
 export default function SettingProfile() {
-  const defaultImage = "/images/Avatar.jpg"
+  const defaultImage = "/images/Profile.jpg"
 
   const [profileImage, setProfileImage] = useState(defaultImage)
   const [fullName, setFullName] = useState("Alexander Sterling")
@@ -57,44 +57,36 @@ export default function SettingProfile() {
 
 
   return (
-    <div className="bg-white rounded-xl border p-6 space-y-6">
+    <div className="bg-white rounded-xl border-2 p-6 space-y-6">
 
       {/* Profile Photo */}
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-5  border-b-2 py-4">
 
-        <div className="relative w-20 h-20">
+        <div className="relative w-20  h-20">
 
           <Image
             src={profileImage}
             alt="Profile"
             fill
-            className="rounded-full object-cover border"
+            className="rounded-full object-cover  border-2 border-blue-700"
           />
-
-
           {/* Pencil */}
           <button
             type="button"
             onClick={handleReplace}
-            className="absolute bottom-0 right-0 w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center"
+            className="absolute bottom-0 right-0 w-6 border-2 border-white h-8 rounded-full bg-blue-600 text-white flex items-center justify-center"
           >
             <Pencil size={14} />
           </button>
-
-
           <input
             ref={fileInputRef}
             type="file"
             accept="image/*"
-            className="hidden"
+            className="hidden "
             onChange={handleFileChange}
           />
-
         </div>
-
-
         <div>
-
           <h3 className="font-medium text-gray-700">
             Profile Photo
           </h3>
@@ -102,20 +94,15 @@ export default function SettingProfile() {
           <p className="text-sm text-gray-500 mb-3">
             JPG, PNG or GIF. Max size 800KB.
           </p>
-
-
           <div className="flex gap-3">
-
-            <Button
+          <Button
               type="button"
               variant="outline"
               onClick={handleReplace}
-              className="px-4 py-2 text-xs text-black border"
+              className="px-4 py-2 text-xs text-black  border"
             >
               Replace
             </Button>
-
-
             <Button
               type="button"
               variant="outline"
@@ -124,19 +111,11 @@ export default function SettingProfile() {
             >
               Remove
             </Button>
-
           </div>
-
         </div>
-
       </div>
-
-
-
       {/* Form */}
       <div className="space-y-5">
-
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
 
@@ -149,13 +128,10 @@ export default function SettingProfile() {
             <input
               type="text"
               value={fullName}
-              onChange={(e)=>setFullName(e.target.value)}
-              className="w-full h-11 rounded-lg border px-4 outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setFullName(e.target.value)}
+              className="w-full h-11 bg-[#F7F9FB] rounded-lg border-2 px-4 outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-
-
-
           {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -165,15 +141,11 @@ export default function SettingProfile() {
             <input
               type="email"
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
-              className="w-full h-11 rounded-lg border px-4 outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full h-11 bg-[#F7F9FB] rounded-lg border-2 px-4 outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-
-
         </div>
-
-
 
         {/* Bio */}
         <div>
@@ -186,17 +158,12 @@ export default function SettingProfile() {
           <textarea
             rows={4}
             value={bio}
-            onChange={(e)=>setBio(e.target.value)}
-            className="w-full rounded-lg border px-4 py-3 outline-none resize-none focus:ring-2 focus:ring-blue-500"
+            onChange={(e) => setBio(e.target.value)}
+            className="w-full rounded-lg border-2 bg-[#F7F9FB] px-4 py-3 outline-none resize-none focus:ring-2 focus:ring-blue-500"
           />
 
         </div>
-
-
       </div>
-
-
-
       {/* Save Button */}
       <div className="flex justify-end">
 

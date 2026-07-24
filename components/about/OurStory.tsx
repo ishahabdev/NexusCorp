@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function OurStory() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-10 items-start px-4 md:px-0">
-      {/* Left side - Image */}
-      <div className="w-full md:w-96 h-72 sm:h-96 relative rounded-sm overflow-hidden bg-gray-100">
+    <section className="bg-[#F7F9FB] border-t-2 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-stretch px-4 sm:px-6 lg:px-10 py-10">
+      {/* Left side - Image (5 columns) */}
+      <div className="md:col-span-5 w-full h-72 sm:h-96 md:h-auto lg:h-100 relative rounded-sm overflow-hidden bg-gray-100">
         <Image
           src="/images/ourstory-pic.jpg"
           alt="Our Story"
@@ -13,12 +13,12 @@ export default function OurStory() {
         />
       </div>
 
-      {/* Right side - Content */}
-      <div className="flex flex-col gap-4 lg:py-12 lg:px-4 md:py-4">
-        <h5 className="text-xl font-bold text-black">
+      {/* Right side - Content (7 columns) */}
+      <div className="md:col-span-7 flex flex-col gap-4 px-6 mr-20">
+        <h5 className="text-xl font-semibold text-black lg:mt-6 py-6">
           Our Story
         </h5>
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-500 text-sm">
           Founded in 2021, NexusCorp emerged from a simple observation:
           technical platforms had become overly complex, cluttered with
           decorative noise that hindered productivity. We set out to create a
@@ -33,7 +33,7 @@ export default function OurStory() {
         </p>
 
         {/* Stats row */}
-        <div className="flex justify-between py-4">
+        <div className="flex justify-between mt-10">
           <div className="flex flex-col">
             <span className="text-2xl font-bold text-blue-600">500+</span>
             <span className="text-sm text-gray-500">Global Partners</span>
