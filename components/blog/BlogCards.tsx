@@ -30,7 +30,7 @@ The results were dramatic. Average response times dropped from 340ms to 190ms gl
     heading: "The Future of Multi-brand UI Systems",
     desc: "Lessons learned from building a shared component library used by over 50 product teams.",
     content: `Building a design system that serves 50+ product teams across multiple brands is not just a technical challenge, it is an organizational one.
- 
+
 Over the past year we rebuilt our component library from the ground up, focusing on theming primitives instead of hardcoded brand values. Every component now accepts a theme token set, allowing each product team to express their own brand identity while staying within shared accessibility and interaction guidelines.
  
 We also introduced a governance model where design and engineering co-own the system, with regular office hours and a public roadmap. This piece covers the technical architecture, the token pipeline, and the cultural shifts needed to get adoption across such a large organization.`,
@@ -106,7 +106,7 @@ We also cover the monitoring setup we use to catch regressions before they reach
     author: "Ken Wheeler",
   },
 ]
- 
+
 
 export default function BlogCard() {
   const [filter, setFilter] = useState("All Posts")
