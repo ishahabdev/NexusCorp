@@ -67,7 +67,7 @@ export default function ArticleIntro() {
                 <div className="py-10">
                     <img src="/images/BlogArticle3.jpg"
                         alt="BlogArticle3"
-                        className="border border-gray-400 rounded-md" />
+                        className="border border-gray-400 rounded-md w-full" />
                     <p className="text-gray-500 text-xs py-2 text-center">Fig 1: Visual representation of Trie-based route resolution.</p>
                 </div>
             </div>
@@ -77,15 +77,20 @@ export default function ArticleIntro() {
                 <p className="text-sm text-gray-600 py-4">Dynamic routing isn&apos;t just about parsing a URL; it&apos;s about managing user intent across a distributed system.
                     By leveraging modern patterns like Edge-first logic and type-safe parameter definitions,
                     we can create experiences that are both fast and maintainable.</p>
-                <div className="flex justify-left gap-6 py-4 border-t border-gray-400">
-                    {
-                        Skills.map((item) => (
-                            <p className="bg-gray-300 px-2 p-1 rounded-sm text-xs font-medium text-gray-700" key={item}>{item}</p>
-                        ))
-                    }
-                </div>
+               <div className="flex flex-wrap justify-start gap-2 sm:gap-3 md:gap-4 py-4 border-t border-gray-400">
+    {
+        Skills.map((item) => (
+            <p 
+                className="bg-gray-100 px-2 sm:px-3 py-1 rounded-sm text-xs font-medium text-gray-700" 
+                key={item}
+            >
+                {item}
+            </p>
+        ))
+    }
+</div>
                  
-                <div className="flex gap-6  items-center   w-2xl p-8 border border-gray-400 rounded-2xl my-10 bg-white">
+                <div className="flex gap-6  items-center w-full   p-8 border border-gray-400 rounded-2xl my-10 bg-white">
 
                     <div className="h-auto w-50">
                         <img
@@ -95,7 +100,7 @@ export default function ArticleIntro() {
                         />
                     </div>
 
-                    <div className="text-left space-y-3 ">
+                    <div className="text-left space-y-3 w-full ">
                         <h1 className="text-xl font-bold">About Alex Chen</h1>
                         <p className="text-sm  text-gray-600">
                             Alex is a Lead Engineer at NexusCorp specializing in distributed systems and
@@ -103,7 +108,7 @@ export default function ArticleIntro() {
                             photography and hiking in the Pacific Northwest.
                         </p>
 
-                        <div className="flex gap-3 pt-2">
+                        <div className="flex gap-3 pt-2 ">
                             {
                                 Social.map((item) => (
                                     <p key={item} className="text-sm text-blue-600 hover:text-gray-800 cursor-pointer">

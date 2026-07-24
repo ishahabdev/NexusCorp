@@ -1,7 +1,6 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
-import Link from 'next/link';
-
 export default function FeaturedBlog() {
     return (
         <section className="py-8">
@@ -37,7 +36,7 @@ export default function FeaturedBlog() {
                             </span>
                         </p>
 
-                        <h2 className="text-2xl font-bold leading-tight break-words">
+                        <h2 className="text-2xl font-bold leading-tight">
                             Mastering the App Router: A Comprehensive Guide to Next.js 14
                         </h2>
 
@@ -48,7 +47,7 @@ export default function FeaturedBlog() {
                         </p>
 
                         <Link
-                            href="/blog/blog-post-details"
+                            href="/blog-details/blog-post-details"
                             className="inline-flex rounded-sm py-2.5 text-sm font-medium text-blue-600 transition-colors duration-200 hover:text-blue-700"
                         >
                             Read Article -&gt;
@@ -68,9 +67,5 @@ export default function FeaturedBlog() {
                     <Button variant='outline' className='font-black'>Subscribe Now</Button>
                 </div>
             </div>
-
-
-
-        </section>
-    );
-}
+        </section> 
+        )}
