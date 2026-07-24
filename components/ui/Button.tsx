@@ -9,7 +9,7 @@ export default function Button({
   className = "",
   ...props
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   variant?: "default" | "outline" | "transparent" | "ghost";
   size?: "sm" | "default" | "lg" | "icon" | "icon-sm";
   className?: string;
